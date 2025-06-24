@@ -99,4 +99,42 @@ document.addEventListener('DOMContentLoaded', () => {
     feeArea.addEventListener('change', updateFee);
     updateFee();
   }
+
+  // 学生カード ポップアップ
+  const studentCards = document.querySelectorAll('.student-list .student');
+  const modal = document.getElementById('student-modal');
+  const modalTitle = document.getElementById('student-modal-title');
+  const modalMsg = document.getElementById('student-modal-message');
+  const modalClose = document.querySelector('.student-modal-close');
+
+  if (studentCards.length && modal && modalTitle && modalMsg && modalClose) {
+    studentCards.forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', () => {
+        const name = card.getAttribute('data-name') || '';
+        const univ = card.getAttribute('data-univ') || '';
+        const msg = card.getAttribute('data-message') || '';
+        modalTitle.textContent = name + (univ ? '（' + univ + '）' : '');
+        modalMsg.textContent = msg;
+        modal.style.display = 'flex';
+        // フォーカスを閉じるボタンに
+        modalClose.focus();
+      });
+    });
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+    modalClose.addEventListener('click', closeModal);
+    modalClose.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') closeModal();
+    });
+    modal.addEventListener('click', e => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', e => {
+      if (modal.style.display === 'flex' && (e.key === 'Escape' || e.key === 'Esc')) {
+        closeModal();
+      }
+    });
+  }
 });

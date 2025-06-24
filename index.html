@@ -72,6 +72,38 @@
         </p>
     </section>
     <!-- =========================
+         運営紹介
+    ========================= -->
+    <section>
+        <h2>運営紹介</h2>
+        <p>
+            子どもも学生も「ひたむき」になってほしい。<br>
+            そんな思いから世界遺産キャンプを企画しています。
+        </p>
+        <div class="student-list">
+            <div class="student" data-name="学生1" data-univ="大学名" data-message="学生1の意気込み全文がここに入ります。">
+                <img src="./images/student1.png" alt="学生1" />
+                <p>学生1: 大学名</p>
+                <p class="student-short-message">意気込み</p>
+            </div>
+            <div class="student" data-name="学生2" data-univ="大学名" data-message="学生2の意気込み全文がここに入ります。">
+                <img src="./images/student2.png" alt="学生2" />
+                <p>学生2: 大学名</p>
+                <p class="student-short-message">意気込み</p>
+            </div>
+            <div class="student" data-name="学生3" data-univ="大学名" data-message="学生3の意気込み全文がここに入ります。">
+                <img src="./images/student3.png" alt="学生3" />
+                <p>学生3: 大学名</p>
+                <p class="student-short-message">意気込み</p>
+            </div>
+            <div class="student" data-name="学生4" data-univ="大学名" data-message="学生4の意気込み全文がここに入ります。">
+                <img src="./images/student4.png" alt="学生4" />
+                <p>学生4: 大学名</p>
+                <p class="student-short-message">意気込み</p>
+            </div>
+        </div>
+    </section>
+    <!-- =========================
          開催概要
     ========================= -->
     <section id="overview">
@@ -144,5 +176,14 @@
             </div>
         </div>
     </section>
+
+    <!-- ポップアップモーダル -->
+    <div id="student-modal" class="student-modal" style="display:none;">
+        <div class="student-modal-content">
+            <span class="student-modal-close" tabindex="0" aria-label="閉じる">&times;</span>
+            <h3 id="student-modal-title"></h3>
+            <p id="student-modal-message"></p>
+        </div>
+    </div>
 </body>
 </html>

@@ -327,6 +327,100 @@ section:not(.first-view) h2 {
 }
 
 /* =========================
+   運営紹介 学生リストカード
+========================= */
+.student-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 24px;
+    margin: 32px 0 0 0;
+}
+
+.student {
+    background: #fff2ec;
+    border: 2px solid #e9541b;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(233,84,27,0.10);
+    padding: 24px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.15s;
+}
+.student:hover, .student:focus-within {
+    box-shadow: 0 6px 24px rgba(233,84,27,0.18);
+    transform: translateY(-2px) scale(1.03);
+}
+.student img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    border: 2px solid #e9541b;
+    background: #fff;
+}
+.student p {
+    margin: 4px 0;
+    text-align: center;
+    font-size: 1.05rem;
+    color: #b63c0a;
+}
+
+/* =========================
+   学生カード ポップアップモーダル
+========================= */
+.student-modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+.student-modal-content {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px 24px 24px 24px;
+    max-width: 90vw;
+    width: 360px;
+    box-shadow: 0 8px 32px rgba(233,84,27,0.18);
+    position: relative;
+    text-align: center;
+    animation: fadeInUp 0.3s;
+}
+.student-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 2rem;
+    color: #e9541b;
+    cursor: pointer;
+    font-weight: bold;
+    background: none;
+    border: none;
+    outline: none;
+    transition: color 0.2s;
+}
+.student-modal-close:hover, .student-modal-close:focus {
+    color: #b63c0a;
+}
+#student-modal-title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #e9541b;
+    font-size: 1.3rem;
+}
+#student-modal-message {
+    color: #222;
+    font-size: 1.1rem;
+    margin: 0;
+    white-space: pre-line;
+}
+
+/* =========================
    レスポンシブ
 ========================= */
 @media (max-width: 1450px) {
@@ -369,7 +463,9 @@ section:not(.first-view) h2 {
         align-items: center;
     }
 }
-
+/* =========================
+   レスポンシブ　スマートフォン
+========================= */
 @media (max-width: 600px) {
     html {
         font-size: 17px;
@@ -441,5 +537,16 @@ section:not(.first-view) h2 {
     }
     .header-firstview {
         padding-bottom: 16px;
+    }
+    .student-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .student {
+        padding: 16px 8px 12px 8px;
+    }
+    .student img {
+        width: 72px;
+        height: 72px;
     }
 }
