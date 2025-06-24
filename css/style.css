@@ -421,6 +421,32 @@ section:not(.first-view) h2 {
 }
 
 /* =========================
+   ページトップへ戻るボタン
+========================= */
+#back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 32px;
+    z-index: 1200;
+    background: #e9541b;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 16px rgba(233,84,27,0.18);
+    cursor: pointer;
+    opacity: 0.85;
+    transition: opacity 0.2s, background 0.2s, transform 0.15s;
+    outline: none;
+}
+#back-to-top:hover, #back-to-top:focus {
+    background: #b63c0a;
+    opacity: 1;
+    transform: translateY(-2px) scale(1.08);
+}
+/* =========================
    レスポンシブ
 ========================= */
 @media (max-width: 1450px) {
@@ -548,5 +574,11 @@ section:not(.first-view) h2 {
     .student img {
         width: 72px;
         height: 72px;
+    }
+    #back-to-top {
+        right: 12px;
+        bottom: 16px;
+        width: 40px;
+        height: 40px;
     }
 }
