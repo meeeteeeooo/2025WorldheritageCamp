@@ -95,7 +95,18 @@
             </div>
             <div class="overview-item">
                 <h3>参加費</h3>
-                <p>25,000円（交通費・食費・宿泊費含む）</p>
+                <div id="fee-select-area">
+                    <label for="fee-area">地域を選択：</label>
+                    <select id="fee-area">
+                        <option value="kanto">関東圏</option>
+                        <option value="kansai">関西圏</option>
+                        <option value="nagoya">名古屋</option>
+                        <option value="hiroshima">広島</option>
+                    </select><br>
+                    <span>
+                        小学生<span id="fee-amount">40,000円</span>/中学生<span id="fee-amount-middle">55,000円</span>
+                    </span>
+                </div>
             </div>
         </div>
     </section>

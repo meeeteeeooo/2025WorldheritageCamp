@@ -79,4 +79,24 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlide(current);
     startAutoSlide();
   }
+
+  // 参加費プルダウン
+  const feeArea = document.getElementById('fee-area');
+  const feeAmount = document.getElementById('fee-amount');
+  const feeAmountMiddle = document.getElementById('fee-amount-middle');
+  if (feeArea && feeAmount && feeAmountMiddle) {
+    const feeMap = {
+      kanto: { elementary: '40,000円', junior: '55,000円' },
+      kansai: { elementary: '30,000円', junior: '40,000円' },
+      nagoya: { elementary: '35,000円', junior: '45,000円' },
+      hiroshima: { elementary: '10,000円', junior: '10,000円' }
+    };
+    function updateFee() {
+      const val = feeMap[feeArea.value] || feeMap['kanto'];
+      feeAmount.textContent = val.elementary;
+      feeAmountMiddle.textContent = val.junior;
+    }
+    feeArea.addEventListener('change', updateFee);
+    updateFee();
+  }
 });

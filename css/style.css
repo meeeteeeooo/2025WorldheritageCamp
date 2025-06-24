@@ -217,8 +217,6 @@ section:not(.first-view) h2 {
     opacity: 1;
     transition: opacity 0.3s;
 }
-.slide:not(.active) {
-}
 .slider-btn {
     position: absolute;
     top: 50%;
@@ -259,6 +257,62 @@ section:not(.first-view) h2 {
 .slider-indicator-dot.active {
     background: #e9541b;
     border-color: #b63c0a;
+}
+
+/* =========================
+   プルダウン（参加費エリア）モダンデザイン
+========================= */
+#fee-select-area {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+#fee-select-area label {
+    margin-right: 8px;
+    font-weight: bold;
+}
+#fee-select-area select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff;
+    border: 2px solid #e9541b;
+    border-radius: 8px;
+    padding: 8px 36px 8px 16px;
+    font-size: 1.1rem;
+    color: #e9541b;
+    font-weight: bold;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(233,84,27,0.08);
+    cursor: pointer;
+    position: relative;
+}
+#fee-select-area select:focus {
+    border-color: #b63c0a;
+    box-shadow: 0 0 0 2px #e9541b33;
+}
+#fee-select-area {
+    position: relative;
+    display: inline-block;
+}
+#fee-select-area select {
+    width: 160px;
+}
+#fee-select-area::after {
+    content: '';
+    position: absolute;
+    top: 21%;
+    right: 22px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid #e9541b;
+}
+#fee-select-area select::-ms-expand {
+    display: none;
 }
 
 /* =========================
