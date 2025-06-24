@@ -10,7 +10,7 @@ html {
 }
 body {
     font-family: 'Yu Gothic', 'Meiryo', sans-serif;
-    background: #f6f8fa;
+    background: #fff6f2; /* 朱色に合う淡い背景色 */
     color: #222;
     margin: 0;
     padding: 0;
@@ -26,10 +26,10 @@ body {
    ヘッダー・ファーストビュー
 ========================= */
 .main-header {
-    background: #4e8c6c;
+    background: #e9541b; /* 朱色 */
     color: #fff;
     border-radius: 0 0 24px 24px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    box-shadow: 0 4px 16px rgba(233,84,27,0.10);
     padding-top: 0;
 }
 
@@ -85,7 +85,7 @@ body {
 .btn-detail {
     display: inline-block;
     background: #fff;
-    color: #4e8c6c;
+    color: #e9541b; /* 朱色 */
     font-weight: bold;
     padding: 16px 40px;
     border-radius: 24px;
@@ -93,14 +93,14 @@ body {
     font-size: 1.25rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
-    border: 2px solid #4e8c6c;
+    border: 2px solid #e9541b; /* 朱色 */
 }
 .btn-detail:hover, .btn-detail:focus {
-    background: #4e8c6c;
+    background: #e9541b; /* 朱色 */
     color: #fff;
-    box-shadow: 0 4px 16px rgba(46,139,87,0.18);
+    box-shadow: 0 4px 16px rgba(233,84,27,0.18);
+    border-color: #b63c0a; /* 濃い朱色 */
     transform: translateY(-2px) scale(1.04);
-    border-color: #2d5c43;
     outline: none;
 }
 
@@ -133,16 +133,16 @@ section:not(.first-view) {
     margin: 40px auto;
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(233,84,27,0.08);
     padding: 32px 24px;
     font-size: 1.2rem;
 }
 section:not(.first-view) h2 {
-    color: #4e8c6c;
+    color: #e9541b; /* 朱色 */
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 16px;
-    border-left: 6px solid #4e8c6c;
+    border-left: 6px solid #e9541b; /* 朱色 */
     padding-left: 12px;
 }
 
@@ -155,8 +155,8 @@ section:not(.first-view) h2 {
     gap: 24px;
 }
 .voice {
-    background: #eaf6f0;
-    border-left: 4px solid #4e8c6c;
+    background: #fff2ec; /* 朱色に合う淡い色 */
+    border-left: 4px solid #e9541b; /* 朱色 */
     padding: 16px 20px;
     border-radius: 8px;
 }
@@ -165,7 +165,7 @@ section:not(.first-view) h2 {
     font-size: 1.15rem;
 }
 .voice span {
-    color: #2d5c43;
+    color: #b63c0a; /* 濃い朱色 */
     font-size: 1.1rem;
 }
 
@@ -194,6 +194,69 @@ section:not(.first-view) h2 {
         opacity: 1;
         transform: none;
     }
+}
+
+/* =========================
+   スライダー
+========================= */
+.slider {
+    position: relative;
+    max-width: 500px;
+    margin: 24px auto;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+    will-change: transform;
+}
+.slide {
+    min-width: 100%;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.slide:not(.active) {
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.7);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0 12px;
+    border-radius: 50%;
+}
+.slider-btn.prev {
+    left: 10px;
+}
+.slider-btn.next {
+    right: 10px;
+}
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0 0 0;
+    position: relative;
+    z-index: 3;
+}
+.slider-indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e0a08a;
+    border: 2px solid #e9541b;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    display: inline-block;
+}
+.slider-indicator-dot.active {
+    background: #e9541b;
+    border-color: #b63c0a;
 }
 
 /* =========================
