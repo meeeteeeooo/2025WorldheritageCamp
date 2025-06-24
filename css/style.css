@@ -303,7 +303,7 @@ section:not(.first-view) h2 {
     content: '';
     position: absolute;
     top: 21%;
-    right: 22px;
+    right: 30px;
     width: 0;
     height: 0;
     pointer-events: none;
@@ -313,6 +313,17 @@ section:not(.first-view) h2 {
 }
 #fee-select-area select::-ms-expand {
     display: none;
+}
+
+/* =========================
+   申込ボタン中央寄せ
+========================= */
+.apply-btn-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 8px;
 }
 
 /* =========================
