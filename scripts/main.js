@@ -112,9 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.cursor = 'pointer';
       card.addEventListener('click', () => {
         const name = card.getAttribute('data-name') || '';
-        const univ = card.getAttribute('data-univ') || '';
         const msg = card.getAttribute('data-message') || '';
-        modalTitle.textContent = name + (univ ? '（' + univ + '）' : '');
+        modalTitle.textContent = name + 'から一言！';
         modalMsg.textContent = msg;
         modal.style.display = 'flex';
         // フォーカスを閉じるボタンに

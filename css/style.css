@@ -366,7 +366,9 @@ section:not(.first-view) h2 {
     font-size: 1.05rem;
     color: #b63c0a;
 }
-
+p.student-short-message {
+    color: #1976d2;
+}
 /* =========================
    学生カード ポップアップモーダル
 ========================= */
