@@ -419,6 +419,18 @@ section:not(.first-view) h2 {
     margin: 0;
     white-space: pre-line;
 }
+/* =========================
+    お問い合わせ
+========================= */
+.contact-info {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    max-width: 80%;
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    white-space: nowrap;
+    overflow-x: auto;
+}
 
 /* =========================
    ページトップへ戻るボタン
@@ -580,5 +592,8 @@ section:not(.first-view) h2 {
         bottom: 16px;
         width: 40px;
         height: 40px;
+    }
+    .contact-info {
+        font-size: 0.85rem;
     }
 }
