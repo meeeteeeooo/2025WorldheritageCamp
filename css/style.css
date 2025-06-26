@@ -35,15 +35,16 @@ body {
 }
 
 .header-inner {
-    display: flex;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* align-items: stretch;
     justify-content: center;
     width: 100%;
     min-height: 380px;
     gap: 0;
     max-width: 100vw;
     height: 100%;
-    box-sizing: border-box;
+    box-sizing: border-box; */
 }
 
 .header-catch {
@@ -52,11 +53,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: left;
-    padding: 0 40px 0 8vw;
+    text-align: center;
+    /* padding: 0 40px 0 8vw; */
 }
 .header-catch h1 {
-    margin: 0 0 12px 0;
+    /* margin: 0 0 12px 0;
     font-size: clamp(2.6rem, 3vw, 3.6rem);
     letter-spacing: 0.1em;
     color: #fff;
@@ -65,7 +66,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     white-space: normal;
-    overflow: visible;
+    overflow: visible; */
 }
 .h1-main {
     font-size: 1.1em;
@@ -83,18 +84,25 @@ body {
     font-size: 1.4rem;
     color: #fff;
 }
+.btn-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 .btn-detail {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #fff;
     color: #e9541b; /* 朱色 */
     font-weight: bold;
-    padding: 16px 40px;
+    margin: 5px;
+    border: 2px solid #e9541b;
+    padding: 1em;
     border-radius: 24px;
     text-decoration: none;
-    font-size: 1.25rem;
+    /* font-size: 1.25rem; */
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
     transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
-    border: 2px solid #e9541b; /* 朱色 */
     text-align: center;
 }
 .btn-detail:hover, .btn-detail:focus {
@@ -461,8 +469,9 @@ section:not(.first-view) h2 {
 /* =========================
    レスポンシブ
 ========================= */
-@media (max-width: 1450px) {
+/* @media (max-width: 1450px) {
     .header-inner {
+        display: flex;
         flex-direction: column;
         align-items: stretch;
         width: 100%;
@@ -500,7 +509,7 @@ section:not(.first-view) h2 {
         justify-content: flex-start;
         align-items: center;
     }
-}
+} */
 /* =========================
    レスポンシブ　スマートフォン
 ========================= */
@@ -509,6 +518,7 @@ section:not(.first-view) h2 {
         font-size: 17px;
     }
     .header-inner {
+        display: flex;
         flex-direction: column;
         align-items: stretch;
         width: 100%;
@@ -541,29 +551,35 @@ section:not(.first-view) h2 {
     .header-catch {
         text-align: center;
         width: 100%;
-        min-width: 0;
+        /* min-width: 0;
         padding: 24px 4vw 12px 4vw;
         box-sizing: border-box;
         justify-content: flex-start;
-        align-items: center;
+        align-items: center; */
     }
     .header-catch h1 {
-        flex-direction: column;
+        /* flex-direction: column;
         font-size: 1.5rem;
         align-items: flex-start;
         overflow: hidden;
-        text-overflow: ellipsis;
+        text-overflow: ellipsis; */
+        font-size: 7vw;
+        width: 100%;
     }
-    .h1-main {
+    .header-catch p {
+        font-size: 4vw;
+        width: 100%;
+    }
+    /* .h1-main {
         font-size: 1em;
         text-align: center;
         width: 100%;
-    }
-    .h1-sub {
+    } */
+    /* .h1-sub {
         font-size: 1em;
         margin-top: 0.1em;
         margin-left: 0;
-    }
+    } */
     section:not(.first-view) {
         padding: 20px 8px;
     }
