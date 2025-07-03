@@ -395,6 +395,21 @@ p.student-short-message {
     white-space: pre-line;
 }
 /* =========================
+   ご協力
+========================= */
+.sponsor-list {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+    }
+.sponsor-list img {
+    width: 100%;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+/* =========================
     お問い合わせ
 ========================= */
 .contact-info {
@@ -495,6 +510,15 @@ p.student-short-message {
     text-align: center;
     }
     
+    .sponsor-list {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;;
+    }
+    .sponsor-list img {
+        width: 100%;
+    }
+
     .contact-info {
     width: 100%;
     padding-left: 1em;
