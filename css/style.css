@@ -11,8 +11,7 @@ html {
 }
 
 body {
-    /* font-family: 'Yu Gothic', 'Meiryo', sans-serif; */
-    background: #fff6f2; /* 朱色に合う淡い背景色 */
+    background: #fff6f2;
     color: #222;
     margin: 0;
     padding: 0;
@@ -28,7 +27,7 @@ body {
    ヘッダー・ファーストビュー
 ========================= */
 .main-header {
-    background: #e9541b; /* 朱色 */
+    background: #e9541b;
     color: #fff;
     border-radius: 0 0 24px 24px;
     box-shadow: 0 4px 16px rgba(233,84,27,0.10);
@@ -81,13 +80,12 @@ body {
     background: #fff;
     color: #e9541b;
     font-weight: bold;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     border: 2px solid #e9541b;
     padding: 1em;
     border-radius: 24px;
     text-decoration: none;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
     text-align: center;
 }
 
@@ -122,11 +120,11 @@ section:not(.first-view) {
     font-size: 1.2rem;
 }
 section:not(.first-view) h2 {
-    color: #e9541b; /* 朱色 */
+    color: #e9541b;
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 16px;
-    border-left: 6px solid #e9541b; /* 朱色 */
+    border-left: 6px solid #e9541b;
     padding-left: 12px;
 }
 
@@ -139,8 +137,8 @@ section:not(.first-view) h2 {
     gap: 24px;
 }
 .voice {
-    background: #fff2ec; /* 朱色に合う淡い色 */
-    border-left: 4px solid #e9541b; /* 朱色 */
+    background: #fff2ec;
+    border-left: 4px solid #e9541b;
     padding: 16px 20px;
     border-radius: 8px;
 }
@@ -149,7 +147,7 @@ section:not(.first-view) h2 {
     font-size: 1.15rem;
 }
 .voice span {
-    color: #b63c0a; /* 濃い朱色 */
+    color: #b63c0a;
     font-size: 1.1rem;
 }
 
@@ -191,13 +189,10 @@ section:not(.first-view) h2 {
 }
 .slides {
     display: flex;
-    transition: transform 0.5s cubic-bezier(.77,0,.18,1);
-    will-change: transform;
 }
 .slide {
     min-width: 100%;
     opacity: 1;
-    transition: opacity 0.3s;
 }
 .slider-btn {
     position: absolute;
@@ -233,7 +228,6 @@ section:not(.first-view) h2 {
     background: #e0a08a;
     border: 2px solid #e9541b;
     cursor: pointer;
-    transition: background 0.2s, border-color 0.2s;
     display: inline-block;
 }
 .slider-indicator-dot.active {
@@ -265,7 +259,6 @@ section:not(.first-view) h2 {
     color: #e9541b;
     font-weight: bold;
     outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
     box-shadow: 0 2px 8px rgba(233,84,27,0.08);
     cursor: pointer;
     position: relative;
@@ -327,7 +320,6 @@ section:not(.first-view) h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: box-shadow 0.2s, transform 0.15s;
 }
 .student:hover, .student:focus-within {
     box-shadow: 0 6px 24px rgba(233,84,27,0.18);
@@ -360,7 +352,6 @@ section:not(.first-view) h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.2s;
 }
 .student-modal-content {
     background: #fff;
@@ -405,13 +396,8 @@ section:not(.first-view) h2 {
     お問い合わせ
 ========================= */
 .contact-info {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    max-width: 80%;
-    font-size: clamp(0.8rem, 2vw, 1.1rem);
-    white-space: nowrap;
-    overflow-x: auto;
+    width: 100%;
+    padding-left: 1em;
 }
 
 /* =========================
@@ -432,7 +418,6 @@ section:not(.first-view) h2 {
     box-shadow: 0 4px 16px rgba(233,84,27,0.18);
     cursor: pointer;
     opacity: 0.85;
-    transition: opacity 0.2s, background 0.2s, transform 0.15s;
     outline: none;
 }
 #back-to-top:hover, #back-to-top:focus {
@@ -440,50 +425,7 @@ section:not(.first-view) h2 {
     opacity: 1;
     transform: translateY(-2px) scale(1.08);
 }
-/* =========================
-   レスポンシブ
-========================= */
-/* @media (max-width: 1450px) {
-    .header-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-        height: auto;
-    }
-    .header-image {
-        order: -1;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        min-width: 0;
-        min-height: 180px;
-        height: auto;
-        box-sizing: border-box;
-    }
-    .header-image img {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        min-height: 180px;
-        max-height: 320px;
-        border-radius: 16px;
-        object-fit: cover;
-        display: block;
-    }
-    .header-catch {
-        text-align: center;
-        width: 100%;
-        min-width: 0;
-        padding: 32px 8vw 16px 8vw;
-        box-sizing: border-box;
-        justify-content: flex-start;
-        align-items: center;
-    }
-} */
+
 /* =========================
    レスポンシブ　スマートフォン
 ========================= */
@@ -525,35 +467,38 @@ section:not(.first-view) h2 {
     .header-catch {
         text-align: center;
         width: 100%;
-        /* min-width: 0;
-        padding: 24px 4vw 12px 4vw;
-        box-sizing: border-box;
-        justify-content: flex-start;
-        align-items: center; */
     }
     .header-catch h1 {
-        /* flex-direction: column;
-        font-size: 1.5rem;
-        align-items: flex-start;
-        overflow: hidden;
-        text-overflow: ellipsis; */
         font-size: 7vw;
         width: 100%;
     }
     .header-catch p {
-        font-size: 4vw;
+        font-size: 3.9vw;
         width: 100%;
     }
-    /* .h1-main {
-        font-size: 1em;
-        text-align: center;
-        width: 100%;
-    } */
-    /* .h1-sub {
-        font-size: 1em;
-        margin-top: 0.1em;
-        margin-left: 0;
-    } */
+
+    .btn-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #e9541b;
+    font-weight: bold;
+    font-size: 3vw;
+    border: 2px solid #e9541b;
+    padding: 1em;
+    border-radius: 24px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    text-align: center;
+    }
+    
+    .contact-info {
+    width: 100%;
+    padding-left: 1em;
+    font-size: 5vw;
+    }
+
     section:not(.first-view) {
         padding: 20px 8px;
     }
