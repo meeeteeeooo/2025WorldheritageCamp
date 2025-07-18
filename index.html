@@ -1,0 +1,310 @@
+<!-- =========================
+     2025 世界遺産キャンプ
+     index.html
+========================= -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>2025 世界遺産キャンプ</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./scripts/main.js" defer></script>
+    <!-- Google Fonts: Sawarabi Gothic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sawarabi Gothic', 'Yu Gothic', 'Meiryo', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- =========================
+         ヘッダー＋ファーストビュー
+    ========================= -->
+    <header class="main-header">
+        <div class="header-inner">
+            <div class="header-catch">
+                <div class="header-title-block">
+                    <h1 class="fade-in-up">
+                        2025<br>
+                        子ども世界遺産キャンプ
+                    </h1>
+                </div>
+                <div class="header-info-block">
+                    <p class="fade-in-up">
+                        2025年10月11日(土)〜13日(月・祝)<br>
+                        広島県・宮島<br>
+                        Presented by NPO法人 全国てらこやネットワーク<br>
+                        後援:文化庁、広島県
+                    </p>
+                </div>
+                <div class="header-btn-block">
+                    <a href="http://terakoya-network.com/" class="btn-detail fade-in-up" target="_blank" rel="noopener noreferrer">全国てらこやネットワークとは？</a>
+                    <a href="#overview" class="btn-detail fade-in-up">開催概要はこちら</a>
+                </div>
+            </div>
+            <div class="header-image zoom-in">
+                <img src="./images/firstView.png" alt="集合写真" />
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================
+         子ども世界遺産キャンプとは
+    ========================= -->
+    <section>
+        <h2>子ども世界遺産キャンプとは</h2>
+        <p>
+            大学生×小学生、全国から宮島に集まり、その地を活かした企画やお寺活動を通して作りあげる感動体験。<br>
+        </p>
+        <div class="slider">
+            <div class="slides">
+                <img src="./images/slider1.png" alt="スライド1" class="slide active">
+                <img src="./images/slider2.png" alt="スライド2" class="slide">
+                <img src="./images/slider3.png" alt="スライド3" class="slide">
+                <img src="./images/slider4.png" alt="スライド4" class="slide">
+            </div>
+            <button class="slider-btn prev" aria-label="前へ">&#10094;</button>
+            <button class="slider-btn next" aria-label="次へ">&#10095;</button>
+            <div class="slider-indicators"></div>
+        </div>
+        <p>
+            キャンプが終わった時には、「あの時は夢中になって頑張れた」と振り返られるような、楽しい思い出をたくさん作りたいと考えています。<br>
+            そして、その経験が日常に戻った時、「あの時できたから今回も頑張ってみよう」「こんなことで挫けていられない」と、次へ進むエネルギーになることを願っています。
+        </p>
+    </section>
+    <!-- =========================
+         開催概要
+    ========================= -->
+    <section id="overview">
+        <h2>開催概要</h2>
+        <div class="overview">
+            <div class="overview-item">
+                <h3>開催日程</h3>
+                <p>2025年10月11日(土)〜13日(月・祝)</p>
+            </div>
+            <div class="overview-item">
+                <h3>開催場所</h3>
+                <p>広島県・宮島弥山　大本山　大聖院</p>
+            </div>
+            <div class="overview-item">
+                <h3>宿泊場所</h3>
+                <p>広島県廿日市市宮島町210</p>
+                <span>※宿坊(畳部屋)に泊まります</span>
+            </div>
+            <div class="overview-item">
+                <h3>対象</h3>
+                <p>全国の小学3年生〜中学校3年生</p>
+            </div>
+            <div class="overview-item">
+                <h3>定員</h3>
+                <p>子ども40名</p>
+            </div>
+            <div class="overview-item">
+                <h3>参加費</h3>
+                <div id="fee-select-area">
+                    <label for="fee-area">地域を選択：</label>
+                    <select id="fee-area">
+                        <option value="kanto">関東圏</option>
+                        <option value="kansai">関西圏</option>
+                        <option value="nagoya">名古屋</option>
+                        <option value="hiroshima">広島</option>
+                    </select><br>
+                    <span>
+                        小学生<span id="fee-amount">40,000円</span>/中学生<span id="fee-amount-middle">55,000円</span>
+                    </span>
+                </div><br>
+                <span>※参加費には、交通費・宿泊費・食費等が含まれます</span><br>
+                <span>※集合場所までの往復交通費は各自負担となります</span>
+            </div>
+            <div class="overview-item">
+                <h3>申込方法</h3>
+                <p>以下のGoogleフォームより期限までにお申込ください</p>
+                <span>※8月20日(水)締め切り</span>
+                <div class="apply-btn-center">
+                    <a href="https://forms.gle/uGWt3M7rVHsbDEEs6" class="btn-detail" target="_blank" rel="noopener noreferrer">申込はこちら</a>
+                </div>
+                <span>※結果は8月28日(木)を目処にterakoyanetwork2010@gmail.comよりメールでお知らせいたします</span><br>
+                <span>※天候・感染症等の事情により、予告なくプログラムを変更・中止する場合がありますのでご了承ください</span>
+            </div>
+        </div>
+    </section>
+    <!-- =========================
+         事前説明会について
+    ========================= -->
+    <section>
+        <h2>事前説明会について</h2>
+        <p>
+            てらこやの事業に初参加の方に向けた事前説明会を開催します。<br>
+            お気軽にご参加ください。(内容:てらこや活動理念の説明など)<br>
+            各地てらこや事業や過去のてらこやネットワーク事業に既にご参加経験がある方も、歓迎です。
+        </p>
+        <h3>日時</h3>
+        <p>
+            2025年8月6日(水) 19:00～20:00
+        </p>
+        <h3>場所</h3>
+        <p>
+            オンライン(Zoomを使用)
+        </p>
+        <h3>参加方法</h3>
+        <p>
+            参加希望の方は、以下のフォームからお申込みください。<br>
+            事前にZoomのURLをお送りします。<br>
+        </p>
+        <div class="apply-btn-center">
+            <a href="https://forms.gle/44QBWjj3ppb7GaJ66" class="btn-detail" target="_blank" rel="noopener noreferrer">事前説明会申込フォーム</a>
+        </div>
+        <p>※世界遺産キャンプ自体の参加を保証するものではありません。<br>（当選者の皆様には、別途、保護者説明会のご案内をいたします。）</p>
+    </section>
+    <!-- =========================
+         大聖院からのメッセージ
+    ========================= -->
+    <section>
+        <h2>大聖院からのメッセージ</h2>
+        <img src="./images/daishoin_YD.png" alt="大聖院副住職" class="daishoin-image">
+        <p>
+        宮島にある寺院で最も歴史が深いのが、真言宗御室派（総本山仁和寺）の大本山大聖院です。<br>
+        空海が唐より帰朝後宮島に渡り弥山にて修行なされ、西暦806年に開基されました。<br>
+        明治天皇行幸の際の宿泊先や、秀吉が茶会を開いたこともあるお寺です。<br>
+        そんなこの地で、全国のみなさんを心よりお待ちしております。
+        </p>
+    </section>
+    <!-- =========================
+         運営紹介
+    ========================= -->
+    <section>
+        <h2>運営紹介</h2>
+        <p>
+            子どもも学生も「ひたむき」になってほしい。<br>
+            そんな思いから世界遺産キャンプを企画しています。
+        </p>
+        <div class="student-list">
+            <div class="student" data-name="りょうま" data-univ="大学名" data-message="全国のてらこや学生と、全国の子ども達とで、せ、せ、世界遺産に泊まれる！！！？？？一生の思い出を一緒につくろうじゃないか！！！！">
+                <img src="./images/student1.png" alt="学生1" />
+                <p>りょうま(鎌倉てらこや)<br>神奈川大学3年生</p>
+                <p class="student-short-message">メッセージを読む</p>
+            </div>
+            <div class="student" data-name="りなし" data-univ="フェリス女学院大学" data-message="何か1つでも子どもたちの心に刻まれるような体験を、一緒にしたいです！">
+                <img src="./images/student2.png" alt="学生2" />
+                <p>りなし(てらこやちば)<br>フェリス女学院大学2年生</p>
+                <p class="student-short-message">メッセージを読む</p>
+            </div>
+            <div class="student" data-name="さやちん" data-univ="高崎健康福祉大学" data-message="一人一人の子ども達と愛を持って関わり、子ども達の素直な感情をしっかりと受け止めて、みんながキラキラ輝く2泊3日にしたいです！！">
+                <img src="./images/student3.png" alt="学生3" />
+                <p>さやちん(伊勢崎てらこや)<br>高崎健康福祉大学3年生</p>
+                <p class="student-short-message">メッセージを読む</p>
+            </div>
+            <div class="student" data-name="たいち" data-univ="日本大学" data-message="全国のこども達と、学生という名のこどもたち……つどえ宮島に！！世界遺産で！全国のみんなで！最高の瞬間を！">
+                <img src="./images/student4.png" alt="学生4" />
+                <p>たいち(龍雲寺てらこや)<br>日本大学3年生</p>
+                <p class="student-short-message">メッセージを読む</p>
+            </div>
+        </div>
+    </section>
+    <!-- =========================
+         過去開催時の反響
+    ========================= -->
+    <section>
+        <h2>過去開催時の反響</h2>
+        <div class="voices">
+            <div class="voice">
+                <span>— 子どもの声</span>
+                <ul>
+                    <li>弥山に登る時にみんなとたのしくしやべりながらいけてたのしかった。 弥山の階段の数を数えながらみんなでのぼり、1,600 段ちかくもあって、びっくりした。</li>
+                </ul>
+            </div>
+            <div class="voice">
+                <span>— 親御さんの声</span>
+                <ul>
+                    <li>第一声が「この体験はした方がいい！」と。内容に関してはよく話を聞けていませんが、初めてお礼の手紙を書きたい！てらこやの方たちとつながりたい！と言っていました。 体験すべてが心に響いたようです。</li>
+                </ul>
+            </div>
+            <div class="voice">
+                <span>— 学生スタッフの声</span>
+                <ul>
+                    <li>
+                        同じ班の学生の本性を知れて仲良くなれて、そのテンションを引きずったまま２日目を子どもと学生と３人で楽しんでいたら他の子どもたちも輪に入ってくれるようになって気づいたら笑い疲れて終わってました。また参加したいです！！
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- =========================
+         よくある質問
+    ========================= -->
+    <section>
+        <h2>よくある質問</h2>
+        <div class="faq">
+            <div class="faq-item">
+                <h3>Q1: 定員はありますか？また、定員を超えた場合はどうなりますか？</h3>
+                <p>A1: 定員は40名(各地での人数制限あり)となっております。<br>
+                       また、定員を超えた場合は抽選となります。
+                </p>
+            </div>
+            <div class="faq-item">
+                <h3>Q2: お友達と一緒に参加できますか？</h3>
+                <p>A2: 応募状況によりご期待に添えかねる場合がございます。ご了承ください。</p>
+            </div>
+            <div class="faq-item">
+                <h3>Q3: キャンセルについて</h3>
+                <p>A3: 新幹線でご参加の皆様は参加決定後のキャンセルについては、JRの払い戻し手数料が発生します。<br>
+                       また、前日、当日のキャンセルはにつきましてはキャンセル料は100%となります。<br>
+                       あらかじめご了承ください。
+                </p>
+        </div>
+    </section>
+    <!-- =========================
+         ご協力
+    ========================= -->
+    <!-- <section>
+        <h2>ご協力</h2>
+        <div class="sponsor">
+            <p>このキャンプは、以下の企業・団体のご支援により実施されます。</p>
+            <div class="sponsor-list">
+                <div class="sponsor-image"><img src="./images/sponsor1.png" alt="スポンサー1"></div>
+                <div class="sponsor-image"><img src="./images/sponsor2.png" alt="スポンサー2"></div>
+            </div>
+        </div>
+    </section> -->
+    <!-- =========================
+         SNS等広報・報告に関するお知らせ
+    ========================= -->
+    <section>
+        <h2>SNS等広報・報告に関するお知らせ</h2>
+        <p>
+            活動の様子を撮影し、ホームページやSNS等に掲載させていただく場合があります。<br>
+            個人情報(プライバシー)保護のため、氏名等の掲載は避け、個人が特定されない形で使用します。
+        </p>
+        <p>恐れ入りますが、特別の事情等により公開を希望されない場合は、事前に下記のメールアドレスまでお知らせください。</p>
+    </section>
+     <!-- =========================
+         お問い合わせ
+    ========================= -->
+    <section>
+        <h2>お問い合わせ</h2>
+        <div class="contact-info">
+            <p>NPO法人 全国てらこやネットワーク事務局</p>
+            <p>
+                神奈川県鎌倉市大船1-25-23 千里ビル3F<br>
+                TEL :0467-84-9746（平日13時～17時）<br>
+                FAX :0467-84-9748（24時間受付）<br>
+                mail:<a href="mailto:terakoyanetwork2010@gmail.com">terakoyanetwork2010@gmail.com</a>
+            </p>
+        </div>
+    </section>
+    <!-- ポップアップモーダル -->
+    <div id="student-modal" class="student-modal" style="display:none;">
+        <div class="student-modal-content">
+            <span class="student-modal-close" tabindex="0" aria-label="閉じる">&times;</span>
+            <h3 id="student-modal-title"></h3>
+            <p id="student-modal-message"></p>
+        </div>
+    </div>
+    <!-- ページトップへ戻るボタン -->
+    <button id="back-to-top" aria-label="ページトップへ" style="display:none;">▲</button>
+</body>
+</html>
